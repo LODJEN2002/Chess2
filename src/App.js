@@ -2,21 +2,34 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  let matrixObject = []
+
+  for (let i = 0; i < 8; i++) {
+    matrixObject.push([])
+    for (let k = 0; k < 8; k++) {
+      matrixObject[i].push(k)
+    }
+  }
+
+  // console.log(matrixObject)
+
+
+  let qwe = matrixObject.forEach((e) => {
+    return (
+      <div>asd</div>
+    )
+  })
+
+  // console.log(matrixObject[0])
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {matrixObject.map(e =>
+          <div>{e}</div>
+        
+        )}
       </header>
     </div>
   );
